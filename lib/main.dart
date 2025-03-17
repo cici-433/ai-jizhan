@@ -10,6 +10,8 @@ import 'screens/home_screen.dart';
 import 'screens/add_transaction_screen.dart';
 import 'screens/statistics_screen.dart';
 import 'screens/settings_screen.dart';
+import 'screens/budget_screen.dart';
+import 'screens/financial_goal_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

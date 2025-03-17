@@ -64,4 +64,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    // 添加WorkManager依赖，使用支持FLAG_IMMUTABLE的版本
+    implementation "androidx.work:work-runtime:2.8.1"
+}

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'budget_screen.dart';
+import 'financial_goal_screen.dart';
 
 /// 设置页面
 class SettingsScreen extends StatefulWidget {
@@ -97,6 +99,48 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       setState(() {
                         _notificationsEnabled = value;
                       });
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
+          
+          // 财务管理
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    '财务管理',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 16),
+                  ListTile(
+                    leading: const Icon(Icons.account_balance_wallet),
+                    title: const Text('预算管理'),
+                    subtitle: const Text('设置和跟踪您的预算'),
+                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BudgetScreen()),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.flag),
+                    title: const Text('财务目标'),
+                    subtitle: const Text('设置和跟踪您的财务目标'),
+                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FinancialGoalScreen()),
+                      );
                     },
                   ),
                 ],
